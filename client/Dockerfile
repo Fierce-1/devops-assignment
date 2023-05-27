@@ -4,7 +4,7 @@
 FROM node:18.16.0-alpine
 
 # Working directory be app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 

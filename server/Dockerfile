@@ -1,8 +1,8 @@
 FROM node:18.16.0-alpine
 
 # Create App Directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /app
+WORKDIR /app
 
 # Install Dependencies
 COPY package*.json ./
