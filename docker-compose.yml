@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+
+  server:
+    image: rajarehman054/serverestore:v1
+    container_name: express
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5000:5000"
+    env_file: ./server/.env
+    environment:
+      - MONGODB_URL=mongodb+srv://Hesham:hesham12345@clusterh.lcaaf.mongodb.net/?retryWrites=true&w=majority;
+      - PORT=5000
+    networks:
+      - app-network
+
+  client:
+    image: rajarehman054/clientestore:v1
+    container_name: react
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
