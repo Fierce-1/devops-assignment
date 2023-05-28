@@ -6,11 +6,11 @@ FROM node:18.16.0-alpine
 # Working directory be app
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
 
 ###  Installing dependencies
 
-RUN npm install --silent
+RUN npm install
 
 # copy local files to app folder
 COPY . .

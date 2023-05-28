@@ -15,4 +15,4 @@ COPY . .
 # Exports
 EXPOSE 5000
 
-CMD ["npm","index.js"]
+CMD ["node","index.js"]
