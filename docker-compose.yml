@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   server:
-    image: hesham786/node-app1:v1.1
+    image: fierce1/node-app2:v1.1
     container_name: express
     volumes:
       - ./server/:/app
