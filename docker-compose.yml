@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   server:
-    image: hesham786/node-app1:v1.1
+    image: hesham786/node-app:v1.1
     container_name: express
     volumes:
       - ./server/:/app
@@ -15,7 +15,7 @@ services:
 
   client:
     stdin_open: true
-    image: hesham786/react-app1:v1.1
+    image: hesham786/react-app:v1.1
     container_name: react
     volumes:
       - ./client/:/app
