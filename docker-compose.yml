@@ -14,8 +14,8 @@ services:
       - MONGODB_URL=mongodb+srv://Hesham:hesham12345@clusterh.lcaaf.mongodb.net/?retryWrites=true&w=majority;
 
   client:
-    stdin_open: true
-    image: fierce1/react-app1:v1.0
+    
+    image: hesham786/react-app1:v1.1
     container_name: react
     volumes:
       - ./client/:/app
